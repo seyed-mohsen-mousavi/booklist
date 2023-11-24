@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="build/tailwind.css">
+    <link href="./build/tailwind.css" rel="stylesheet" />
+    <title>Drop Down || Mr ROoT</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
 </head>
-<body>
-    
+
+<body class="h-screen bg-slate-200">
+    <div class="container flex flex-row gap-5  justify-center mt-4">
+        <div>
+            <div class="  my-2 border mx-auto    border-[2px]   justify-center flex items-center rounded-md shadow-md">
+                <div>
+                    <button type="button"
+                        class="flex items-center bg-gray-100 rounded-l-md border border-white justify-center w-12 h-12 text-black ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="  w-full">
+                    <input type="search" x-model="input3" id="title"
+                        class="w-full h-12 px-4 py-1 rounded-r-md border border-gray-100 text-gray-800 focus:outline-none"
+                        placeholder="Title">
+                </div>
+            </div>
+            <div class="  my-2 border mx-auto    border-[2px]   justify-center flex items-center rounded-md shadow-md">
+                <div>
+                    <button type="button"
+                        class="flex items-center bg-gray-100 rounded-l-md border border-white justify-center w-12 h-12 text-white ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-900" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="  w-full">
+                    <input type="search" x-model="input1" id="author"
+                        class="w-full h-12 px-4 py-1 rounded-r-md border border-gray-100 text-gray-800 focus:outline-none"
+                        placeholder="Author">
+                </div>
+            </div>
+            <div class="  my-2 border mx-auto    border-[2px]   justify-center flex items-center rounded-md shadow-md">
+                <div>
+                    <button type="button"
+                        class="flex items-center bg-gray-100 rounded-l-md border border-white justify-center w-12 h-12 text-white ">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-black">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="  w-full">
+                    <input type="date" x-model="input2" id="date"
+                        class="w-full h-12 px-4 py-1 rounded-r-md border border-gray-100 text-gray-800 focus:outline-none"
+                        placeholder="ِDate">
+                </div>
+            </div>
+            <input type="submit" value="AddBook" id="addBook"
+                class="bbg-gray-100 w-full rounded-l-md border border-white justify-center  text-black py-3 px-5 shadow-lg cursor-pointer hover:bg-gray-100 transition-all">
+        </div>
+        <div class="flex flex-col justify-start relative">
+            <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+                <table class="w-full text-sm text-left text-gray-500 ">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                        <tr>
+                            <th scope="col" class="py-3 px-6">Title</th>
+                            <th scope="col" class="py-3 px-6">Author</th>
+                            <th scope="col" class="py-3 px-6">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="absolute top-20 left-5 flex items-center" id="no">
+                <img src="../src/img/3024051.jpg" class="w-32" alt="">
+                <p class="text-[#ff4f5a] font-bold">No books</p>
+            </div>
+        </div>
+    </div>
+    <!-- Notif -->
+    <div class="px-8 py-6 bg-red-400 text-white  justify-between rounded absolute left-6 top-6 hidden "
+        id="notification">
+        <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-6" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                    clip-rule="evenodd" />
+            </svg>
+            <p>Error! chek fild</p>
+        </div>
+        <button class="text-red-100 hover:text-white " onclick="this.parentElement.style.display = 'none';">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <script src="../src/js/script.js"></script>
 </body>
+
 </html>
